@@ -1,6 +1,6 @@
 # Stockify: Market Analysis API
 This API provides stock market analysis and advice using FastAPI, LangChain, and Groq's LLM.
-This API is also deployed at:
+This API is also deployed at: https://stockify-api-29i7.onrender.com
 
 ## Features:
 
