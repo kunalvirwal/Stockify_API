@@ -92,7 +92,7 @@ def get_advice(request: AdviceRequest):
     start_date = request.start_date or "1900-1-1"
     end_date = request.end_date or date.today().isoformat()
     user_prompt += f"\nConsider data from {start_date} to {end_date}"  
-    return getAdvice(user_prompt)
+    return {"advice":getAdvice(user_prompt)}
 
 
 tools = [get_price,get_price_history]
