@@ -11,7 +11,7 @@ Retrieve the current price of a stock.
 Receive personalized investment advice based on stock data and user prompts.
 
 ## Endpoints
-> GET /price/{share}  
+### GET /price/{share}  
 
 Get the current price of a specified stock.
 
@@ -19,14 +19,29 @@ Parameters:
 - share (path parameter): The name or symbol of the stock.
 
 Example:
-> GET /price/AAPL
+```
+curl https://stockify.kunalvirwal.tech/price/apple
+```
 
 Response:
->"150.25 USD"
+```
+"150.25 USD"
+```
 
-> POST /advice  
+### POST /advice  
 
 Get personalized investment advice.
+
+Example:
+```
+curl -X POST https://api.example.com/advice \
+  -H "Content-Type: application/json" \
+  -d '{
+    "user_prompt": "Should I invest in Tesla?",
+    "start_date": "2023-01-01",
+    "end_date": "2023-12-31"
+  }'
+```
 
 Request Body:
 
